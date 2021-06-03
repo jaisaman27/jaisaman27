@@ -1,0 +1,30 @@
+def s(i,A):
+    l=[]
+    if(i==min(A)):
+        return 0
+    else:
+        for j in A:
+            if(i>j):
+                l.append(j)
+        return max(l)
+def g(i,A):
+    l=[]
+    if(i==max(A)):
+        return 0
+    else:
+        for j in A:
+            if(i<j):
+                l.append(j)
+        return (min(l))
+
+def summ(A):
+    l=[]
+    for i in A:
+        k=s(i,A)
+        m=g(i,A)
+        print(k,m)
+        l.append(k+m)
+        
+    return l
+A=[1,5,2,3,8]
+print(summ(A))
