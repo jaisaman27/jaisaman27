@@ -1,0 +1,20 @@
+def g(i,arr):
+    l=[]
+    if(i==arr[len(arr)-1]):
+        return -1
+    else:
+        for j in arr[arr.index(i):]:
+            if(i<j):
+                l.append(j)
+        return (min(l))
+
+def nextGreaterElement(N,arr):
+    l=[]
+    for i in arr:
+        m=g(i,arr)
+        #print(m)
+        l.append(m)
+        
+    return l
+arr=[5,3,10,15,20]
+print(nextGreaterElement(len(arr),arr))
